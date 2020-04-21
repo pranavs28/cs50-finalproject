@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap + Bootswatch theme-->
-    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/bootstrap.min.css">
+    <link rel="icon" href="../static/favicon.ico">
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -15,18 +16,33 @@
     
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-          </ul>
-        </div>
-      </nav>
+    <!-- NavBar -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><b>CoV</b>isit</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                {% if True %}
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Quote</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Buy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sell</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">History</a></li>
+                </ul>
+                <ul class="navbar-nav c">
+                    <li class="nav-item"><a class="nav-link" href="#">Log Out</a></li>
+                </ul>
+                {% else %}
+                <ul class="navbar-nav ml-auto mt-2 py-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+                </ul>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
 </body>
 </html>
